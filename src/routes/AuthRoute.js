@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Navigate } from 'react-router-dom';
 
 import { AuthLayout } from '@/components/Layouts';
 import { useAuth } from '@/hooks';
@@ -16,7 +16,7 @@ function AuthRoute({ component: Component, ...rest }) {
       render={(props) => {
         if (!isAuth) {
           return (
-            <Redirect
+            <Navigate
               to={{
                 pathname: '/login',
                 state: { from: props.location },

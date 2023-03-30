@@ -4,7 +4,7 @@ A simple react starter (create-react-app) with antd, @reduxjs/toolkit, axios & m
 
 ## Installation
 
-- `git clone git@github.com:tranquangvu/antd-react-starter.git your-app-name`
+- `git clone git@github.com:vutran011/antd-react-starter.git your-app-name`
 - `cd your-app-name`
 - `yarn install`
 - `yarn prepare`
@@ -14,7 +14,7 @@ A simple react starter (create-react-app) with antd, @reduxjs/toolkit, axios & m
 I use [realworld-docs.netlify.app](https://realworld-docs.netlify.app) for authentication example,
 so please register an account directly from [demo.realworld.io](https://demo.realworld.io/), then try it to login to our app.
 
-Or just try with my created account: `me@goldenowl.asia/password123`.
+Or just try with my created account: `test_account@example.com/password123`.
 
 ## What We Have?
 

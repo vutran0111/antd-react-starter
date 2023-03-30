@@ -2,9 +2,8 @@
   "extends": [
     "airbnb",
     "airbnb/hooks",
-    "react-app",
-    "react-app/jest",
-    "prettier"
+    "prettier",
+    "plugin:security/recommended"
   ],
   "plugins": [
     "prettier"
@@ -24,7 +23,7 @@
   "rules": {
     "semi": ["error", "always"],
     "quotes": ["error", "single"],
-    "max-len": ["error", 80],
+    "max-len": ["error", 120],
     "no-alert": "off",
     "no-console": "off",
     "no-debugger": "off",
@@ -32,7 +31,18 @@
     "react/forbid-prop-types": "off",
     "react/require-default-props": "off",
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": "off",
+    "no-restricted-syntax": [
+      "error",
+      "WithStatement",
+      "BinaryExpression[operator='in']"
+    ],
+    "no-unused-expressions": [
+      "error",
+      { "allowShortCircuit": true, "allowTernary": true }
+    ],
+    "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
   },
   "settings": {
     "import/resolver": {

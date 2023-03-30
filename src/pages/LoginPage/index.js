@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { Form, Input, Button } from 'antd';
 
 import { ErrorsAlert } from '@/components';
@@ -18,7 +18,7 @@ function LoginPage() {
   };
 
   if (auth.user) {
-    return <Redirect to="/" />;
+    return <Navigate to="/" />;
   }
 
   return (

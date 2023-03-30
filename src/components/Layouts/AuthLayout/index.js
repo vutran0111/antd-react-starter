@@ -1,17 +1,23 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Navigate, Outlet } from 'react-router-dom';
+import { useAuth } from '@/hooks';
 import './index.scss';
 
-function AuthLayout({ children }) {
+function AuthLayout() {
+  const { isAuth } = useAuth();
+
   return (
     <div className="auth-layout">
-      {children}
+      {!isAuth &&
+        <Navigate
+          to={{
+            pathname: '/login',
+            // state: { from: props.location },
+          }}
+        />}
+      {isAuth && <Outlet />}
     </div>
   );
 }
-
-AuthLayout.propTypes = {
-  children: PropTypes.element,
-};
 
 export default AuthLayout;
