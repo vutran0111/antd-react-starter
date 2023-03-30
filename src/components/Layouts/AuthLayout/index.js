@@ -12,7 +12,6 @@ function AuthLayout() {
         <Navigate
           to={{
             pathname: '/login',
-            // state: { from: props.location },
           }}
         />}
       {isAuth && <Outlet />}

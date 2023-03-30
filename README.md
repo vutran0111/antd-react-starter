@@ -4,7 +4,7 @@ A simple react starter (create-react-app) with antd, @reduxjs/toolkit, axios & m
 
 ## Installation
 
-- `git clone git@github.com:vutran011/antd-react-starter.git your-app-name`
+- `git clone git@github.com:vutran0111/antd-react-starter.git your-app-name`
 - `cd your-app-name`
 - `yarn install`
 - `yarn prepare`
